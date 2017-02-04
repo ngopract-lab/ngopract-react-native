@@ -9,6 +9,7 @@ import {
 
 import { styles } from './style';
 import { StatusCard } from './StatusCard';
+import { UserProfile } from './UserProfile';
 import { Navbar } from '../components/Navbar';
 
 export class MyScene extends Component {
@@ -44,23 +45,7 @@ export class MyScene extends Component {
 
         { this.props.title === 'PROFILE' ?
           <ScrollView style={styles.screenContainer}>
-            <View style={styles.cardItem}>
-              <View style={styles.cardPersonProfile}>
-                <Image
-                  source={{uri: 'https://www.wrnsstudio.com/system/people/83/grid_sm_grid_image.jpg'}}
-                  style={{width: 120, height: 120, borderRadius: 15}} />
-                <View>
-                  <Text style={styles.cardProfileTitle}>Michael Cahyono</Text>
-                  <Text style={styles.cardProfilePosition}>SVP of Engineering</Text>
-                </View>
-              </View>
-              <View style={styles.cardStatus}>
-                <Text style={styles.cardStatusText}>
-                  My name is Michael Cahyono, and I love programming and design.
-                </Text>
-              </View>
-            </View>
-
+            <UserProfile />
           </ScrollView>
         : <Text></Text> }
 
