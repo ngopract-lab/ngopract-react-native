@@ -11,8 +11,8 @@ import { styles } from '../style';
 
 import { connector } from '../store';
 
-import { StatusCard } from './StatusCard';
-import { UserProfile } from './UserProfile';
+import StatusCard from './StatusCard';
+import UserProfile from './UserProfile';
 import { Navbar } from '../components/Navbar';
 import { BackButton } from '../components/BackButton';
 import { PostButton } from '../components/PostButton';

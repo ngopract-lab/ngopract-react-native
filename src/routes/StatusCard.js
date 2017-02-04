@@ -10,7 +10,9 @@ import {
 
 import { styles } from '../style';
 
-export const StatusCard = props => (
+import { connector } from '../store';
+
+const StatusCard = props => (
   <View style={styles.cardItem}>
     <View style={styles.cardPerson}>
       <Image
@@ -19,7 +21,7 @@ export const StatusCard = props => (
       <View>
         <TouchableHighlight
           underlayColor='#FFF'
-          onPress={props.goToProfile}>
+          onPress={() => props.goToProfile(props._id) }>
           <Text style={styles.cardTitle}>{props.username}</Text>
         </TouchableHighlight>
         <Text style={styles.cardPosition}>{props.userPos} at {props.userCompany}</Text>
@@ -41,3 +43,5 @@ export const StatusCard = props => (
 StatusCard.propTypes = {
   goToProfile: PropTypes.func.isRequired,
 };
+
+export default connector(StatusCard);

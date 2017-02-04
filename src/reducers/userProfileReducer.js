@@ -1,4 +1,10 @@
-let initialState = {};
+let initialState = {
+  _id: 2,
+  username: "Charles Cokro",
+  userPos: "Director of Marketing",
+  userCompany: "Grow.id",
+  userDescription: "Lorem Ipsum",
+};
 
 const userBase = [
   {

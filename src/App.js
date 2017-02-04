@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -9,9 +9,11 @@ import {
 
 import MainScene from './routes/MainScene';
 
-export default class ngopractReactNative extends Component {
+import { connector } from './store';
+
+class App extends Component {
   render() {
-    return(
+    return (
       <Navigator
         style={styles.navigator}
         initialRoute={{ title: 'HOME', index: 0 }}
@@ -30,11 +32,12 @@ export default class ngopractReactNative extends Component {
                 navigator.pop();
               }
             }}
-            goToProfile={() => {
+            goToProfile={userId => {
               navigator.push({
                 title: 'PROFILE',
                 index: 1,
-              })
+              });
+              this.props.selectUserProfile(userId);
             }}
             goToHome={() => {
               if (route.index !== 0) {
@@ -75,3 +78,9 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+App.propTypes = {
+  selectUserProfile: PropTypes.func.isRequired,
+}
+
+export default connector(App);
