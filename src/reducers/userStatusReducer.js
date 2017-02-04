@@ -37,7 +37,7 @@ let initialState = [
   }
 ];
 
-const fetchUserStatuses = (state) => {
+const fetchUserStatuses = state => {
   return state;
 }
 
