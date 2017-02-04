@@ -12,6 +12,7 @@ import { StatusCard } from './StatusCard';
 import { UserProfile } from './UserProfile';
 import { Navbar } from '../components/Navbar';
 import { BackButton } from '../components/BackButton';
+import { PostButton } from '../components/PostButton';
 
 export class MyScene extends Component {
   render() {
@@ -33,9 +34,7 @@ export class MyScene extends Component {
         : <Text></Text> }
         </ScrollView>
 
-        <TouchableHighlight style={styles.postButton}>
-          <Text style={styles.postButtonText}>+</Text>
-        </TouchableHighlight>
+        <PostButton />
       </View>
     )
   }
