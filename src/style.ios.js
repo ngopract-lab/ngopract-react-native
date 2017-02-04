@@ -16,25 +16,55 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
     backgroundColor: '#2574A9',
   },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 10,
+    zIndex: 999,
+  },
+  backButtonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  backButtonText: {
+    fontWeight: 'bold',
+    color: '#FFF',
+    textAlignVertical: 'top',
+    paddingLeft: 5,
+  },
   sceneTitleText: {
     color: '#F5F5F5',
     textAlign: 'center',
     fontWeight: 'bold',
   },
+  navbar: {
+    backgroundColor: '#FDFDFD',
+    height: 50,
+  },
+  navbarTab: {
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
+  },
+  navbarTabText: {
+    color: '#2574A9',
+    fontWeight: 'bold',
+  },
   postButton: {
     position: 'absolute',
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
     backgroundColor: '#2574A9',
     borderRadius: 1000,
-    bottom: 10,
-    right: 10,
+    bottom: 20,
+    right: 20,
     alignItems: 'center',
     justifyContent: 'center'
   },
   postButtonText: {
     color: '#FFF',
-    fontSize: 70,
+    fontSize: 50,
     textAlign: 'center',
     textAlignVertical: 'center',
   },
@@ -46,7 +76,9 @@ export const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     borderRadius: 10,
-    padding: 20
+    padding: 20,
+    borderColor: '#DDD',
+    borderWidth: 0.5,
   },
   cardPerson: {
     flex: 1,
@@ -70,5 +102,25 @@ export const styles = StyleSheet.create({
   cardStatusText: {
     color: '#222',
     fontSize: 12,
-  }
+  },
+  screenContainer: {
+    height: windowHeight,
+  },
+  cardPersonProfile: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  cardProfileTitle: {
+    color: '#2574A9',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 20,
+  },
+  cardProfilePosition: {
+    color: '#222',
+    fontSize: 15,
+    marginTop: 5,
+    textAlign: 'center',
+  },
 });

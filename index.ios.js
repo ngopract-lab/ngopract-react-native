@@ -20,7 +20,7 @@ export default class ngopractReactNative extends Component {
     return (
       <Navigator
         style={styles.navigator}
-        initialRoute={{ title: 'My Initial Scene', index: 0 }}
+        initialRoute={{ title: 'HOME', index: 0 }}
         renderScene={(route, navigator) =>
           <MyScene
             title={route.title}
@@ -34,6 +34,20 @@ export default class ngopractReactNative extends Component {
             onBack={() => {
               if (route.index > 0) {
                 navigator.pop();
+              }
+            }}
+            goToProfile={() => {
+              navigator.push({
+                title: 'PROFILE',
+                index: 1,
+              })
+            }}
+            goToHome={() => {
+              if (route.index !== 0) {
+                navigator.push({
+                  title: 'HOME',
+                  index: 0,
+                })
               }
             }}
           />
