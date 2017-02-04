@@ -27,8 +27,8 @@ export const StatusCard = props => (
     </View>
     <View style={styles.cardStatus}>
       <Text style={styles.cardStatusText}>
-        This is a super magnificent status created using react native app!
-        `I'm so happy that my status can be used as a dummy in this awesome
+        `This is a super magnificent status created using react native app!
+        I'm so happy that my status can be used as a dummy in this awesome
         react native app. Have fun!`
       </Text>
     </View>

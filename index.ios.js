@@ -14,11 +14,16 @@ import {
 } from 'react-native';
 
 import App from './src/App';
+import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
+import { store } from './src/store';
 
 export default class ngopractReactNative extends Component {
   render() {
     return (
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     );
   }
 }
