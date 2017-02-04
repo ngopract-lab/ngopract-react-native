@@ -17,7 +17,7 @@ import { Navbar } from '../components/Navbar';
 import { BackButton } from '../components/BackButton';
 import { PostButton } from '../components/PostButton';
 
-class MyScene extends Component {
+class MainScene extends Component {
   render() {
     const userStatusesData = this.props.userStatusesData; // state from Redux
     return (
@@ -46,7 +46,7 @@ class MyScene extends Component {
   }
 }
 
-MyScene.propTypes = {
+MainScene.propTypes = {
   title: PropTypes.string.isRequired,
   onForward: PropTypes.func.isRequired,
   onBack: PropTypes.func.isRequired,
@@ -54,4 +54,4 @@ MyScene.propTypes = {
   goToProfile: PropTypes.func.isRequired,
 };
 
-export default connector(MyScene);
+export default connector(MainScene);

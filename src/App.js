@@ -7,7 +7,7 @@ import {
   Navigator,
 } from 'react-native';
 
-import MyScene from './routes/MyScene';
+import MainScene from './routes/MainScene';
 
 export default class ngopractReactNative extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class ngopractReactNative extends Component {
         style={styles.navigator}
         initialRoute={{ title: 'HOME', index: 0 }}
         renderScene={(route, navigator) =>
-          <MyScene
+          <MainScene
             title={route.title}
             onForward={() => {
               const nextIndex = route.index + 1;
