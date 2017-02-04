@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { styles } from './style';
+import { styles } from '../style';
 
 export const StatusCard = props => (
   <View style={styles.cardItem}>

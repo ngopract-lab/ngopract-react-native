@@ -7,7 +7,7 @@ import {
   Image
 } from 'react-native';
 
-import { styles } from '../routes/style';
+import { styles } from '../style';
 
 export const Navbar = props => {
   console.log(props);

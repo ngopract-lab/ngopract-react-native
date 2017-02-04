@@ -7,7 +7,7 @@ import {
   Image
 } from 'react-native';
 
-import { styles } from './style';
+import { styles } from '../style';
 
 export const UserProfile = () => (
   <View style={styles.cardItem}>

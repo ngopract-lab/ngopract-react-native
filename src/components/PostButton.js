@@ -4,7 +4,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
-import { styles } from '../routes/style';
+import { styles } from '../style';
 
 export const PostButton = () => (
   <TouchableHighlight style={styles.postButton}>

@@ -7,7 +7,8 @@ import {
   Image
 } from 'react-native';
 
-import { styles } from './style';
+import { styles } from '../style';
+
 import { StatusCard } from './StatusCard';
 import { UserProfile } from './UserProfile';
 import { Navbar } from '../components/Navbar';
@@ -22,16 +23,18 @@ export class MyScene extends Component {
           <BackButton {...this.props} />
           <Text style={styles.sceneTitleText}>{this.props.title}</Text>
         </View>
+
         <Navbar {...this.props} />
+
         <ScrollView style={styles.screenContainer}>
-        { this.props.title === 'HOME' ?
-            [1, 2, 3, 4, 5].map(item =>
-              <StatusCard key={item} {...this.props} />
-            )
-        : <Text></Text> }
-        { this.props.title === 'PROFILE' ?
-            <UserProfile />
-        : <Text></Text> }
+          { this.props.title === 'HOME' ?
+              [1, 2, 3, 4, 5].map(item =>
+                <StatusCard key={item} {...this.props} />
+              )
+          : <Text></Text> }
+          { this.props.title === 'PROFILE' ?
+              <UserProfile />
+          : <Text></Text> }
         </ScrollView>
 
         <PostButton />
