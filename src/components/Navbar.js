@@ -9,9 +9,7 @@ import {
 
 import { styles } from '../style';
 
-export const Navbar = props => {
-  console.log(props);
-  return (
+export const Navbar = props => (
   <ScrollView style={styles.navbar} horizontal={true}>
     <TouchableHighlight
       style={styles.navbarTab}
@@ -29,8 +27,7 @@ export const Navbar = props => {
       <Text style={styles.navbarTabText}>Profile</Text>
     </View>
   </ScrollView>
-  );
-};
+);
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
