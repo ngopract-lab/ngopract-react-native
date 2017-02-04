@@ -11,33 +11,17 @@ import { styles } from './style';
 import { StatusCard } from './StatusCard';
 import { UserProfile } from './UserProfile';
 import { Navbar } from '../components/Navbar';
+import { BackButton } from '../components/BackButton';
 
 export class MyScene extends Component {
   render() {
     return (
       <View style={styles.myScene}>
         <View style={styles.sceneTitle}>
-          <TouchableHighlight
-            onPress={this.props.onBack}
-            style={styles.backButton}
-            underlayColor='transparent'>
-            { this.props.title !== 'HOME' ?
-              <View style={styles.backButtonContainer}>
-                <Image
-                  source={require('../images/back.png')}
-                  style={{width: 15, height: 15}}/>
-                <Text style={styles.backButtonText}>
-                  BACK
-                </Text>
-              </View> :
-              <Text></Text> }
-
-          </TouchableHighlight>
+          <BackButton {...this.props} />
           <Text style={styles.sceneTitleText}>{this.props.title}</Text>
         </View>
         <Navbar {...this.props} />
-
-
         <ScrollView style={styles.screenContainer}>
         { this.props.title === 'HOME' ?
             [1, 2, 3, 4, 5].map(item =>
