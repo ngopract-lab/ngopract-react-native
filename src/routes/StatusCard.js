@@ -22,7 +22,7 @@ export const StatusCard = props => (
           onPress={props.goToProfile}>
           <Text style={styles.cardTitle}>{props.username}</Text>
         </TouchableHighlight>
-        <Text style={styles.cardPosition}>SVP of Engineering</Text>
+        <Text style={styles.cardPosition}>{props.userPos}</Text>
       </View>
     </View>
     <View style={styles.cardStatus}>

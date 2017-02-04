@@ -7,8 +7,20 @@ let initialState = [
   },
   {
     _id: 2,
-    username: "Budi Cokro",
-    userPos: "SVP of Engineering",
+    username: "Charles Cokro",
+    userPos: "Director of Marketing",
+    statusMessage: `This is a super magnificent status created using react native app! I'm so happy again!`,
+  },
+  {
+    _id: 3,
+    username: "Mike Handoyo",
+    userPos: "Comedian",
+    statusMessage: `This is a super magnificent status created using react native app! I'm so happy again!`,
+  },
+  {
+    _id: 4,
+    username: "Jude Low",
+    userPos: "Business Development Manager",
     statusMessage: `This is a super magnificent status created using react native app! I'm so happy again!`,
   }
 ];
