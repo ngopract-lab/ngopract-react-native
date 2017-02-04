@@ -7,7 +7,7 @@ import {
   Navigator,
 } from 'react-native';
 
-import { MyScene } from './routes/MyScene';
+import MyScene from './routes/MyScene';
 
 export default class ngopractReactNative extends Component {
   render() {

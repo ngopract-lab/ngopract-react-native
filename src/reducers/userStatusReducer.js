@@ -13,14 +13,14 @@ let initialState = [
   }
 ];
 
-const fetchUserStatus = (state) => {
+const fetchUserStatuses = (state) => {
   return state;
 }
 
 const userStatusReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_USER_STATUS':
-      return fetchUserStatus(state);
+    case 'FETCH_USER_STATUSES':
+      return fetchUserStatuses(state);
       break;
     default:
       return state;

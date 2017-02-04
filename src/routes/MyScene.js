@@ -9,14 +9,17 @@ import {
 
 import { styles } from '../style';
 
+import { connector } from '../store';
+
 import { StatusCard } from './StatusCard';
 import { UserProfile } from './UserProfile';
 import { Navbar } from '../components/Navbar';
 import { BackButton } from '../components/BackButton';
 import { PostButton } from '../components/PostButton';
 
-export class MyScene extends Component {
+class MyScene extends Component {
   render() {
+    const userStatusesData = this.props.userStatusesData; // state from Redux
     return (
       <View style={styles.myScene}>
         <View style={styles.sceneTitle}>
@@ -28,8 +31,8 @@ export class MyScene extends Component {
 
         <ScrollView style={styles.screenContainer}>
           { this.props.title === 'HOME' ?
-              [1, 2, 3, 4, 5].map(item =>
-                <StatusCard key={item} {...this.props} />
+              userStatusesData.map(userStatusObj =>
+                <StatusCard key={userStatusObj._id} {...this.props} {...userStatusObj} />
               )
           : <Text></Text> }
           { this.props.title === 'PROFILE' ?
@@ -50,3 +53,5 @@ MyScene.propTypes = {
   goToHome: PropTypes.func.isRequired,
   goToProfile: PropTypes.func.isRequired,
 };
+
+export default connector(MyScene);
