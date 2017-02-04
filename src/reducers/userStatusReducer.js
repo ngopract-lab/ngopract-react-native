@@ -3,13 +3,13 @@ let initialState = [
     _id: 1,
     username: "Budi Chayono",
     userPos: "SVP of Engineering",
-    statusMessage: "Lorem Ipsum",
+    statusMessage: `This is a super magnificent status created using react native app! I'm so happy that my status can be used as a dummy in this awesome react native app. Have fun!`,
   },
   {
     _id: 2,
     username: "Budi Cokro",
     userPos: "SVP of Engineering",
-    statusMessage: "Lorem Ipsum 2",
+    statusMessage: `This is a super magnificent status created using react native app! I'm so happy again!`,
   }
 ];
 
