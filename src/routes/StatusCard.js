@@ -14,18 +14,23 @@ export const StatusCard = props => (
   <View style={styles.cardItem}>
     <View style={styles.cardPerson}>
       <Image
-        source={{uri: 'https://www.wrnsstudio.com/system/people/83/grid_sm_grid_image.jpg'}}
-        style={{width: 70, height: 70, borderRadius: 35}} />
+        source={{uri: props.userPhoto}}
+        style={{width: 60, height: 60, borderRadius: 30}} />
       <View>
         <TouchableHighlight
           underlayColor='#FFF'
           onPress={props.goToProfile}>
           <Text style={styles.cardTitle}>{props.username}</Text>
         </TouchableHighlight>
-        <Text style={styles.cardPosition}>{props.userPos}</Text>
+        <Text style={styles.cardPosition}>{props.userPos} at {props.userCompany}</Text>
       </View>
     </View>
     <View style={styles.cardStatus}>
+      { props.statusImage !== '' ?
+        <Image source={{uri: props.statusImage}} style={styles.cardStatusImage} />
+        :
+        <Text></Text>
+      }
       <Text style={styles.cardStatusText}>
         {props.statusMessage}
       </Text>

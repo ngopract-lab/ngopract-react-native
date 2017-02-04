@@ -72,10 +72,10 @@ export const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flex: 1,
     flexDirection: 'column',
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 20,
     marginRight: 20,
-    borderRadius: 10,
+    borderRadius: 5,
     padding: 20,
     borderColor: '#DDD',
     borderWidth: 0.5,
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
   cardTitle: {
     color: '#2574A9',
     marginLeft: 20,
-    marginTop: 15,
+    marginTop: 10,
     fontSize: 18,
     fontWeight: 'bold',
   },
@@ -97,11 +97,20 @@ export const styles = StyleSheet.create({
     fontSize: 12,
   },
   cardStatus: {
-    paddingTop: 20
+    paddingTop: 20,
+    flex: 1,
+    flexDirection: 'column',
   },
   cardStatusText: {
     color: '#222',
     fontSize: 12,
+  },
+  cardStatusImage: {
+    width: windowWidth * 0.8,
+    height: 200,
+    marginBottom: 10,
+    resizeMode: 'contain',
+    borderRadius: 20,
   },
   screenContainer: {
     height: windowHeight,
