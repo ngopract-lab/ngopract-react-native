@@ -21,7 +21,7 @@ export class MyScene extends Component {
             { this.props.title !== 'HOME' ?
               <View style={styles.backButtonContainer}>
                 <Image
-                  source={require('./images/back.png')}
+                  source={require('../images/back.png')}
                   style={{width: 15, height: 15}}/>
                 <Text style={styles.backButtonText}>
                   BACK
