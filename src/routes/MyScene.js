@@ -37,17 +37,17 @@ export class MyScene extends Component {
         </View>
         <Navbar {...this.props} />
 
-        { this.props.title === 'HOME' ?
-          <ScrollView style={styles.screenContainer}>
-            <StatusCard goToProfile={this.props.goToProfile}/>
-          </ScrollView>
-        : <Text></Text> }
 
-        { this.props.title === 'PROFILE' ?
-          <ScrollView style={styles.screenContainer}>
-            <UserProfile />
-          </ScrollView>
+        <ScrollView style={styles.screenContainer}>
+        { this.props.title === 'HOME' ?
+            [1, 2, 3].map(item =>
+              <StatusCard key={item} goToProfile={this.props.goToProfile} />
+            )
         : <Text></Text> }
+        { this.props.title === 'PROFILE' ?
+            <UserProfile />
+        : <Text></Text> }
+        </ScrollView>
 
         <TouchableHighlight style={styles.postButton}>
           <Text style={styles.postButtonText}>+</Text>
