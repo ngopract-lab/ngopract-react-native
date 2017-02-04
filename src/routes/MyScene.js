@@ -40,8 +40,8 @@ export class MyScene extends Component {
 
         <ScrollView style={styles.screenContainer}>
         { this.props.title === 'HOME' ?
-            [1, 2, 3].map(item =>
-              <StatusCard key={item} goToProfile={this.props.goToProfile} />
+            [1, 2, 3, 4, 5].map(item =>
+              <StatusCard key={item} {...this.props} />
             )
         : <Text></Text> }
         { this.props.title === 'PROFILE' ?
