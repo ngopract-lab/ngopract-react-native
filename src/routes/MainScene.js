@@ -7,9 +7,8 @@ import {
   Image
 } from 'react-native';
 
+import { connect } from 'react-redux';
 import { styles } from '../style';
-
-import { connector } from '../store';
 
 import StatusCard from './StatusCard';
 import UserProfile from './UserProfile';
@@ -54,4 +53,8 @@ MainScene.propTypes = {
   goToProfile: PropTypes.func.isRequired,
 };
 
-export default connector(MainScene);
+const mapStateToProps = state => ({
+  userStatusesData: state.userStatusesData,
+});
+
+export default connect(mapStateToProps)(MainScene);

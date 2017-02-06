@@ -9,8 +9,7 @@ import {
 } from 'react-native';
 
 import { styles } from '../style';
-
-import { connector } from '../store';
+import { connect } from 'react-redux';
 
 const StatusCard = props => (
   <View style={styles.cardItem}>
@@ -44,4 +43,8 @@ StatusCard.propTypes = {
   goToProfile: PropTypes.func.isRequired,
 };
 
-export default connector(StatusCard);
+const mapDispatchToProps = dispatch => ({
+  selectUserProfile: userId => dispatch(fetchUserProfile(userId)),
+});
+
+export default connect(mapDispatchToProps)(StatusCard);

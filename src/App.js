@@ -7,9 +7,11 @@ import {
   Navigator,
 } from 'react-native';
 
-import MainScene from './routes/MainScene';
+import { connect } from 'react-redux';
+import { fetchUserProfile } from './actions';
+import { store } from './store';
 
-import { connector } from './store';
+import MainScene from './routes/MainScene';
 
 class App extends Component {
   render() {
@@ -83,4 +85,10 @@ App.propTypes = {
   selectUserProfile: PropTypes.func.isRequired,
 }
 
-export default connector(App);
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = dispatch => ({
+  selectUserProfile: userId => dispatch(fetchUserProfile(userId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
