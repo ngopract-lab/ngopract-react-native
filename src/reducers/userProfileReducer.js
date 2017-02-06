@@ -38,7 +38,7 @@ const userBase = [
 ];
 
 const fetchUserProfile = (state, action) => {
-  let userId = action.value;
+  let userId = action.payload;
   let userBaseArrIndex = userBase.map(user => user._id).indexOf(userId);
   let newState = userBase[userBaseArrIndex]; // contains the user object
   return newState;
