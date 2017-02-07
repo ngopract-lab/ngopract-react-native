@@ -1,3 +1,5 @@
+import * as ActionTypes from '../actions/constants';
+
 let initialState = {
   _id: 2,
   username: "Charles Cokro",
@@ -46,7 +48,7 @@ const fetchUserProfile = (state, action) => {
 
 const userProfileReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_USER_PROFILE':
+    case ActionTypes.FETCH_USER_PROFILE:
       return fetchUserProfile(state, action);
       break;
     default:
