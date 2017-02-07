@@ -3,13 +3,13 @@ import {
   Dimensions,
 } from 'react-native';
 
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+const WINDOW_WIDTH = Dimensions.get('window').width;
+const WINDOW_HEIGHT = Dimensions.get('window').height;
 
 export const styles = StyleSheet.create({
   myScene: {
     backgroundColor: '#F5F5F5',
-    height: windowHeight,
+    height: WINDOW_HEIGHT,
   },
   sceneTitle: {
     paddingTop: 40,
@@ -106,14 +106,14 @@ export const styles = StyleSheet.create({
     fontSize: 12,
   },
   cardStatusImage: {
-    width: windowWidth * 0.8,
+    width: WINDOW_WIDTH * 0.8,
     height: 200,
     marginBottom: 10,
     resizeMode: 'contain',
     borderRadius: 20,
   },
   screenContainer: {
-    height: windowHeight,
+    height: WINDOW_HEIGHT,
   },
   cardPersonProfile: {
     flex: 1,
