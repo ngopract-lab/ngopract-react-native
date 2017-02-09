@@ -19,31 +19,37 @@ import { PostButton } from '../components/PostButton';
 class MainScene extends Component {
   render() {
     const userStatusesData = this.props.userStatusesData; // state from Redux
+    const loadSceneSection = routeTitle => {
+      switch (routeTitle) {
+        case 'HOME':
+          return userStatusesData.map(userStatusObj =>
+            <StatusCard key={userStatusObj._id} {...this.props} {...userStatusObj} />
+          );
+        case 'PROFILE':
+          return <UserProfile />;
+        default:
+          return userStatusesData.map(userStatusObj =>
+            <StatusCard key={userStatusObj._id} {...this.props} {...userStatusObj} />
+          );
+      }
+    }
     return (
       <View style={styles.myScene}>
         <View style={styles.sceneTitle}>
           <BackButton {...this.props} />
-          <Text style={styles.sceneTitleText}>{this.props.title}</Text>
+          <Text style={styles.sceneTitleText}>
+            {this.props.title}
+          </Text>
         </View>
-
         <Navbar {...this.props} />
-
         <ScrollView style={styles.screenContainer}>
-          { this.props.title === 'HOME' ?
-              userStatusesData.map(userStatusObj =>
-                <StatusCard key={userStatusObj._id} {...this.props} {...userStatusObj} />
-              )
-          : <Text></Text> }
-          { this.props.title === 'PROFILE' ?
-              <UserProfile />
-          : <Text></Text> }
+          { loadSceneSection(this.props.title) }
         </ScrollView>
-
         <PostButton />
       </View>
-    )
+    );
   }
-}
+};
 
 MainScene.propTypes = {
   title: PropTypes.string.isRequired,

@@ -39,7 +39,7 @@ class App extends Component {
                 title: 'PROFILE',
                 index: 1,
               });
-              this.props.selectUserProfile(userId);
+              this.props.selectUserProfile(userId); // from Redux
             }}
             goToHome={() => {
               if (route.index !== 0) {
